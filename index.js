@@ -1,4 +1,5 @@
 const http = require('http');
+const { handleReqRes } = require('./helpers/handleRedRes')
 
 const app = {};
 
@@ -13,8 +14,6 @@ app.createServer = () => {
     });
 }
 
-app.handleReqRes = (req,res) => {
-    res.end('Hello Wrold!')
-}
+app.handleReqRes = handleReqRes;
 
 app.createServer();
